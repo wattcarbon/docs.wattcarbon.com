@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="https://api.wattcarbon.com/redoc/" target="_blank">Check out our API Docs!</a>
+            <h2>Overview</h2>
+            <ul>
+                <li><a class='sidebar-a' href="#" data-doc="README.md" class="active">Introduction</a></li>
+            </ul>
+            <h2>Data Onboarding</h2>
+            <ul>
+                <li><a class='sidebar-a' href="#" data-doc="data_onboarding/Onboarding Guide.md">Onboarding Guide</a></li>
+                <li><a class='sidebar-a' href="#" data-doc="data_onboarding/Developer Guide.md">Guide (for Developers)</a></li>
+            </ul>
+            <h2>M&V</h2>
+            <ul>
+                <li><a class='sidebar-a' href="#" data-doc="m_and_v/Shared.md">Shared Guidelines </a></li>
+                <h3>M&V Plans</h3>
+                {% for file in site.static_files %}
+                    {% if file.path contains 'm_and_v' and file.path contains 'plans' file.extname == '.md' %}
+                        <li><a class='sidebar-a' href="#" data-doc="{{ file.path | remove_first: '/' }}">{{ file.basename | replace: '_', ' ' }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="content" id="content">
+            {{ content }}
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
