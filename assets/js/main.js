@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add click handlers to sidebar links
-    document.querySelectorAll('.sidebar-a').forEach(link => {
+    document.querySelectorAll('.navigate').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const docPath = e.target.dataset.doc;

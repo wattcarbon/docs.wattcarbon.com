@@ -13,9 +13,9 @@
 
 To get started, go to <a href="https://www.wattcarbon.com">WattCarbon.com</a> and sign up for an account.
 
-Please read our overview of our <a href="https://docs.wattcarbon.com/docs/wattcarbon/4j72ii32prdsf-guide-to-data-onboarding-for-watt-carbon-users">data onboarding</a> process for an understanding of our data requirements.
+Please read our overview of our <a href="https://docs.wattcarbon.com/#data_onboarding%2FOnboarding%20Guide.md">data onboarding</a> process for an understanding of our data requirements.
 
-Developers can follow our <a href="https://docs.wattcarbon.com/docs/wattcarbon/44rdv3z1o0527-uploading-devices-and-data-end-to-end-example">end-to-end tutorial</a>.
+Developers can follow our <a href="https://docs.wattcarbon.com/#data_onboarding%2FDeveloper%20Guide.md">end-to-end tutorial</a>.
 
 Any assets that you create can be easily viewable through <a href="https://app.wattcarbon.com">your dashboard</a>.
 
