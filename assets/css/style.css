@@ -70,3 +70,45 @@ code {
         border-bottom: 1px solid #ddd;
     }
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+}
+
+th {
+    font-weight: 600;
+    text-align: left;
+    padding: 12px 8px;
+    border-bottom: 2px solid #ddd;
+}
+
+td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* For strikethrough text in tables */
+td del, th del {
+    color: #999;
+    text-decoration-color: #999;
+}
+
+/* Add some space before tables */
+h2 + table, h3 + table, h4 + table, p + table {
+    margin-top: 1em;
+}
+
+/* Make tables scrollable on mobile */
+@media (max-width: 768px) {
+    .content {
+        overflow-x: auto;
+    }
+    table {
+        min-width: 600px; /* Ensure table doesn't get too cramped */
+    }
+}

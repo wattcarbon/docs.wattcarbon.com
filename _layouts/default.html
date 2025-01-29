@@ -24,7 +24,7 @@
                 <li><a class='sidebar-a' href="#" data-doc="m_and_v/Shared.md">Shared Guidelines </a></li>
                 <h3>M&V Plans</h3>
                 {% for file in site.static_files %}
-                    {% if file.path contains 'm_and_v' and file.path contains 'plans' file.extname == '.md' %}
+                    {% if file.path contains 'm_and_v' and file.path contains 'plans' and file.extname == '.md' %}
                         <li><a class='sidebar-a' href="#" data-doc="{{ file.path | remove_first: '/' }}">{{ file.basename | replace: '_', ' ' }}</a></li>
                     {% endif %}
                 {% endfor %}
