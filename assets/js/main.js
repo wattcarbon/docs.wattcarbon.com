@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('content').innerHTML = marked.parse(content);
         
         // Update active state in sidebar
-        document.querySelectorAll('.sidebar a').forEach(a => {
+        document.querySelectorAll('.sidebar-a').forEach(a => {
             a.classList.remove('active');
         });
         document.querySelector(`[data-doc="${docPath}"]`).classList.add('active');
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add click handlers to sidebar links
-    document.querySelectorAll('.sidebar a').forEach(link => {
+    document.querySelectorAll('.sidebar-a').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const docPath = e.target.dataset.doc;
