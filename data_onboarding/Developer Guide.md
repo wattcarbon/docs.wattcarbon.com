@@ -38,7 +38,7 @@ token = token_payload["access_token"]
 client.headers["Authorization"] = "Bearer " + token
 ```
 
-See the documentation for [POST /auth/token](https://docs.wattcarbon.com/docs/wattcarbon/8b3f8e57ec2e9-create-token) for more information.
+See the documentation for [POST /auth/token](https://api.wattcarbon.com/#tag/Tokens/operation/create_token_auth_token_post) for more information.
 
 ## 2. Create a device.
 
@@ -107,9 +107,9 @@ create_device_response.raise_for_status()
 
 <!-- theme: info -->
 
-> If you have a unique ID for the site that you use for your own tracking, you can pass it in the `customId` field. The API will enforce that the same custom ID is never used on multiple sites in your account. See [Custom IDs](CustomIds.md) for more information.
+> If you have a unique ID for the site that you use for your own tracking, you can pass it in the `customId` field. The API will enforce that the same custom ID is never used on multiple sites in your account.
 
-See [POST /devices](https://docs.wattcarbon.com/docs/wattcarbon/4339aebb3db1a-create-device) for more information about all the potential values. If you need to change the device's parameters later on, you can use the [PUT /devices/{id}](https://docs.wattcarbon.com/docs/wattcarbon/ed3d2ae52c643-update-device) endpoint.
+See [POST /devices](https://api.wattcarbon.com/#tag/Devices/operation/create_device_devices_post) for more information about all the potential values. If you need to change the device's parameters later on, you can use the [PUT /devices/{id}](https://api.wattcarbon.com/#tag/Devices/operation/update_device_devices__device_id__put) endpoint.
 
 ## 3. Upload device data
 
@@ -126,6 +126,6 @@ datetime,value_kwh
 2022-08-01T04:00:00+00:00,1.6
 ```
 
-See [POST /devices/{device_id}/timeseries](https://docs.wattcarbon.com/docs/wattcarbon/dd24db62819b9-upload-device-timeseries) for more information about the file format and how to upload savings data.
+See [POST /devices/{device_id}/timeseries](https://api.wattcarbon.com/#tag/Devices/operation/upload_device_timeseries_devices__device_id__timeseries_post) for more information about the file format and how to upload savings data.
 
 For now, that is all you need to do to add a device and provide device data. We will include additional steps in the future to further automate our registration process, but for now please email <support@wattcarbon.com> when you have completed this process.

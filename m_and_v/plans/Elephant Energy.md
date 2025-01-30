@@ -27,10 +27,10 @@ We expect to receive 12 pre-intervention bills representing approximately 12 mon
 
 ### User-Provided Data Requirements
 
-The following is a static description of the required and optional fields for a given Asset. An updated CSV template with the correct column names [is available here](https://api.wattcarbon.com/devices/csv/template/electrification_nrel_resstock_deemed) and timeseries description [is available here](https://docs.wattcarbon.com/docs/wattcarbon/qgeogozj1wujc-upload-device-timeseries).
+The following is a static description of the required and optional fields for a given Asset. An updated CSV template with the correct column names [is available here](https://api.wattcarbon.com/devices/csv/template/electrification_nrel_resstock_deemed) and timeseries description [is available here](https://api.wattcarbon.com/#tag/Devices/operation/upload_device_timeseries_devices__device_id__timeseries_post).
 
 ### Attributional Data
-The following data is required in addition to what is listed in the [Shared M&V Documentation](../Shared.md).
+The following data is required in addition to what is listed in the [Shared M&V Documentation](/#m_and_v%2FShared.md).
 
 #### General Building Characteristics
 

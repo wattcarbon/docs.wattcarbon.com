@@ -33,11 +33,11 @@ The six broad device categories are:
 5. Energy Efficiency
 6. EV Charging
 
-The fields required at the device level will vary based on type of device. The [CreateDevice](https://docs.wattcarbon.com/docs/wattcarbon/4339aebb3db1a-create-device) endpoint can be used to create individual devices, and this page allows you to toggle to the device kind to see changing required fields based on device kind.
+The fields required at the device level will vary based on type of device. The [CreateDevice](https://api.wattcarbon.com/#tag/Devices/operation/create_device_devices_post) endpoint can be used to create individual devices, and this page allows you to toggle to the device kind to see changing required fields based on device kind.
 
-If you prefer, you can also use the bulk [CreateDevices](https://docs.wattcarbon.com/docs/wattcarbon/bc619ccedbe2d-create-devices) endpoint to upload an array of devices that are of the same kind via a CSV file. For details on this approach please contact us.
+If you prefer, you can also use the bulk [CreateDevices](https://api.wattcarbon.com/#tag/Devices/operation/create_devices_devices_csv_post) endpoint to upload an array of devices that are of the same kind via a CSV file. For details on this approach please contact us.
 
-Optional: Upload time-series data. The methodology will determine the specific [requirements](https://docs.wattcarbon.com/docs/wattcarbon/dd24db62819b9-upload-device-timeseries) for a csv. 
+Optional: Upload time-series data. The methodology will determine the specific [requirements](https://api.wattcarbon.com/#tag/Devices/operation/upload_device_timeseries_devices__device_id__timeseries_post) for a csv. 
 
 ## Step Two - Create Hourly Savings
 
