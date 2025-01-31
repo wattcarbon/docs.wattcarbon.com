@@ -1,4 +1,8 @@
-# Guide to Data Onboarding for WattCarbon Users
+---
+title: Guide to Data Onboarding for WattCarbon Users
+nav: Onboarding Guide
+order: 1
+---
 
 ## Introduction
 
