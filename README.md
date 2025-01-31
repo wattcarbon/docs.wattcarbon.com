@@ -1,28 +1,16 @@
-# Welcome to the WEATS API & Data Onboarding Guide
+# docs.wattcarbon.com
 
-#### WEATS (WattCarbon Energy Attribute Tracking System) enables users to:
+This is the source code for <https://docs.wattcarbon.com>.
 
-- Track, manage, and report on decarbonization data across your entire portfolio. 
-- Assigns a unique serial number to each watt-hour or gram of CO2
-- Hourly tracking for every type of project, synced with actual grid carbon intensity
-- Automated data transfer for always current carbon ROI
-- API export of EAC records for third-party integration
+## Local Development
 
+Clone down [github/pages-gem](https://github.com/github/pages-gem) and run the following commands:
 
-#### Are you project developer trying to connect your data to generate EACs? 
+```bash
+$ make image
+$ SITE=/path/to/the/docs.wattcarbon.com/repo/on/your/machine make server
+```
 
-To get started, go to <a href="https://www.wattcarbon.com">WattCarbon.com</a> and sign up for an account.
+Then browse to <http://localhost:4000> to view the site.
 
-Please read our overview of our Data Onboarding process for an understanding of our data requirements.
-
-Developers can follow our end-to-end tutorial.
-
-Any assets that you create can be easily viewable through <a href="https://app.wattcarbon.com">your dashboard</a>.
-
-Compatible assets include: 
-- Whole-building meter data 
-- Metered solar inverter data
-- ESS / battery charge/discharge information 
-- Telemetry data
-- For certain electrification projects that used calibrated models, data may be limited to project information. 
-
+Note that changes to `_config.yml` require a restart of the server.

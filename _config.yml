@@ -1,3 +1,20 @@
 title: WattCarbon API Documentation
 description: Comprehensive documentation for Your API
 markdown: kramdown
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+collections:
+  data-onboarding:
+    title: Data Onboarding
+    output: true
+    permalink: /:collection/:name
+    sort_by: order
+  m-and-v:
+    title: M&V
+    output: true
+    sort_by: title
+    permalink: /:collection/:name

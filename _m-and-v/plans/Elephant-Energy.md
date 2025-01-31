@@ -1,7 +1,8 @@
-# Elephant Energy - Measurement and Verification Plan
-
-Last Updated: January 27, 2025
-
+---
+title: Elephant Energy - Measurement and Verification Plan
+nav: Elephant Energy
+last_updated: 2025-01-27
+---
 ## Executive Summary
 
 This document outlines the measurement and verification (M\&V) methodology and data intake requirements for the electrification projects managed by Elephant Energy. The plan encompasses baseline establishment, metering infrastructure, data collection protocols, and savings calculation methodologies. 
@@ -30,7 +31,7 @@ We expect to receive 12 pre-intervention bills representing approximately 12 mon
 The following is a static description of the required and optional fields for a given Asset. An updated CSV template with the correct column names [is available here](https://api.wattcarbon.com/devices/csv/template/electrification_nrel_resstock_deemed) and timeseries description [is available here](https://api.wattcarbon.com/#tag/Devices/operation/upload_device_timeseries_devices__device_id__timeseries_post).
 
 ### Attributional Data
-The following data is required in addition to what is listed in the [Shared M&V Documentation](/#m_and_v%2FShared.md).
+The following data is required in addition to what is listed in the [Shared M&V Documentation]({% link _m-and-v/Shared.md %}).
 
 #### General Building Characteristics
 

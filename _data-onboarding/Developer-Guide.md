@@ -1,4 +1,8 @@
-# Uploading Devices and Data end to end example
+---
+title: Uploading Devices and Data end to end example
+nav: Developer Guide
+order: 2
+---
 
 This example will walk you through logging in, creating a device, and uploading savings values. In order to register devices to the WattCarbon platform, you must first go through the process of registering as a WattCarbon project developer. Contact us at <support@wattcarbon.com> if you are interested in registering projects.
 
