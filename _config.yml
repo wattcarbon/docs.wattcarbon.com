@@ -18,3 +18,7 @@ collections:
     output: true
     sort_by: title
     permalink: /:collection/:name
+links:
+  m_and_v:
+    shared: "https://docs.google.com/document/d/e/2PACX-1vQUMTHD9ORo248BqGWIB8Ynx1Nvc6Wwrd7YC-woJed8MFztGXYTP-8uirumnD1d0jIauCttRSMivCoS/pub"
+
