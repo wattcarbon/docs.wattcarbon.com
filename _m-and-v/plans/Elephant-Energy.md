@@ -13,7 +13,9 @@ Elephant Energy will upload a photo of a receipt of each Asset that will include
 
 ## Methodology Selection
 
-We expect to receive 12 pre-intervention bills representing approximately 12 months of data that will be provided upon Asset upload. We expect to use the **NREL Resstock Deemed (Scaled from Annual Baseline Usage)** methodology. Approximately 1-year post-intervention, WattCarbon will receive 12 post-intervention bills representing approximately 12 months of data. After receiving and auditing this data, if it passes data sufficiency requirements, the Asset will switch methodologies to an **EEMetered 1-Year Pre-Post Modeled Savings (Using Deemed Hourization)** methodology. 
+We will use hte [**Technical Specification: Quantifying energy use and emissions savings for electrification**](https://docs.google.com/document/d/e/2PACX-1vTcP5q0VDsP7ewCNHNQBBChud__jor3HES3E45RiKgNZCAlHZ3q6HF6Z0mQ2cSbd7F9SxSbFcdw3wnY/pub) methodology.
+
+We expect to receive 12 pre-intervention bills representing approximately 12 months of data that will be provided upon Asset upload. We expect to use "From NREL Building Selection, if no reporting data is available (Baseline: 1.1.2.2 and Reporting: 1.2.3). Approximately 1-year post-intervention, WattCarbon will receive 12 post-intervention bills representing approximately 12 months of data. After receiving and auditing this data, if it passes data sufficiency requirements, the Asset will switch to "From EEMeter Model, if reporting data is available (Baseline: 1.1.2.1 and Reporting: 1.2.2.1). 
 
 ## Data Requirements
 
