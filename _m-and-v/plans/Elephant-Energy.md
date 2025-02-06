@@ -19,6 +19,8 @@ We expect to receive 12 pre-intervention bills representing approximately 12 mon
 
 ### Incorporated Data Requirements
 
+The following are defined in the [Basic Decarbonization Accounting Documentation]({{ site.links.m_and_v.shared }}):
+
 - Definitions  
 - Electricity Carbon Intensity Calculations  
 - Shared Data Intake Requirements  
