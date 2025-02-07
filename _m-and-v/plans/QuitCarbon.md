@@ -55,6 +55,7 @@ The following data is required in addition to what is listed in [**{{ site.links
 | Field | Description | Default if not provided | Required? | Use |
 | :---- | :---- | :---- | :---- | :---- |
 | Commenced Operation Date | Date when the electrification system installation was completed and began operation | \- | Y | Modeling |
+| Physical Serial Number | Serial number of the installed heat pump | \- | Y | Verification |
 | Heating Backup System | Description of any secondary or backup heating system installed | \- | \- | Modeling |
 | Furnace Replacement? | Indicates if an electric furnace was installed to replace existing heating system | \- | Y | Modeling |
 | Water Heater Replacement? | Indicates if an electric water heater was installed to replace existing unit | \- | Y | Modeling |
