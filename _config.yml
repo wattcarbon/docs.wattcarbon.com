@@ -17,7 +17,7 @@ collections:
     title: M&V Plans
     output: true
     sort_by: title
-    permalink: /:collection/:name
+    permalink: /:collection/:path
 links:
   m_and_v:
     shared:
