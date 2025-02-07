@@ -13,7 +13,7 @@ Elephant Energy will upload a photo of a receipt of each Asset that will include
 
 ## Methodology Selection
 
-We will use the [**Technical Specification: Quantifying energy use and emissions savings for electrification**]({{ site.links.m_and_v.electrification.url }}) methodology.
+We will use the [**{{ site.links.m_and_v.electrification.name }}**]({{ site.links.m_and_v.electrification.url }}) methodology.
 
 We expect to receive 12 pre-intervention bills representing approximately 12 months of data that will be provided upon Asset upload. We expect to use "From NREL Building Selection, if no reporting data is available (Baseline: 1.1.2.2 and Reporting: 1.2.3). Approximately 1-year post-intervention, WattCarbon will receive 12 post-intervention bills representing approximately 12 months of data. After receiving and auditing this data, if it passes data sufficiency requirements, the Asset will switch to "From EEMeter Model, if reporting data is available (Baseline: 1.1.2.1 and Reporting: 1.2.2.1). 
 
