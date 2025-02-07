@@ -13,7 +13,7 @@ BlocPower will provide evidence that will demonstrate the installation of the me
 
 ## Methodology Selection
 
-We will use the [**Technical Specification: Quantifying energy use and emissions savings for electrification**]({{ site.links.m_and_v.electrification }}) methodology.
+We will use the [**{{ site.links.m_and_v.electrification.name }}**]({{ site.links.m_and_v.electrification.url }}) methodology.
 
 We expect to use "From NREL ResStock SqFt-Based Load Selection (Baseline: 1.1.3.2 and Reporting: 1.1.3.2).
 
