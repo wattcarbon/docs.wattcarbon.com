@@ -29,4 +29,7 @@ links:
     electrification:
       name: "Technical Specification: Quantifying energy use and emissions savings for electrification"
       url: "https://docs.google.com/document/d/e/2PACX-1vTcP5q0VDsP7ewCNHNQBBChud__jor3HES3E45RiKgNZCAlHZ3q6HF6Z0mQ2cSbd7F9SxSbFcdw3wnY/pub"
+    demand_response_ciso:
+      name: "CISO: Day Matching (5-in-10 Residential Only, 10-in-10, and Combined)"
+      url: "https://bpmcm.caiso.com/BPM%20Document%20Library/Demand%20Response/BPM_for_Demand_Response_V5_clean.pdf#page=35"
 
