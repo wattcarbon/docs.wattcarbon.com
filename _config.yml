@@ -14,7 +14,7 @@ collections:
     permalink: /:collection/:name
     sort_by: order
   m-and-v:
-    title: M&V
+    title: M&V Plans
     output: true
     sort_by: title
     permalink: /:collection/:name
