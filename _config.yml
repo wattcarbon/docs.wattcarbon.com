@@ -22,13 +22,13 @@ links:
   m_and_v:
     shared:
       name: "Technical Specification: Common Decarbonization"
-      url: "https://docs.google.com/document/d/e/2PACX-1vQUMTHD9ORo248BqGWIB8Ynx1Nvc6Wwrd7YC-woJed8MFztGXYTP-8uirumnD1d0jIauCttRSMivCoS/pub"
+      url: "https://methods.openeac.org/methodologies/basic-decarbonization-accounting/2025-02-07"
     lighting:
-      name: "Technical Specification: Sample-Measured Reporting (Modeled Baseline, Estimated Measured Wattage"
-      url: "https://docs.google.com/document/d/e/2PACX-1vRiygYF8sn2SGKse62rzzMgh8Gthl3aLbJVDVb8jp1DNn-TLZ5apwxxit4ng7kxlkEfByx_iR-Xyed3/pub"
+      name: "Technical Specification: Sample-Measured Reporting (Modeled Baseline, Estimated Measured Wattage)"
+      url: "https://methods.openeac.org/methodologies/whole-building-metered-lighting/2025-02-07"
     electrification:
       name: "Technical Specification: Quantifying energy use and emissions savings for electrification"
-      url: "https://docs.google.com/document/d/e/2PACX-1vTcP5q0VDsP7ewCNHNQBBChud__jor3HES3E45RiKgNZCAlHZ3q6HF6Z0mQ2cSbd7F9SxSbFcdw3wnY/pub"
+      url: "https://methods.openeac.org/methodologies/device-level-heating-household-electrification/2025-02-07"
     demand_response_ciso:
       name: "CISO: Day Matching (5-in-10 Residential Only, 10-in-10, and Combined)"
       url: "https://bpmcm.caiso.com/BPM%20Document%20Library/Demand%20Response/BPM_for_Demand_Response_V5_clean.pdf#page=35"
