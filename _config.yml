@@ -32,4 +32,7 @@ links:
     demand_response_ciso:
       name: "CISO: Day Matching (5-in-10 Residential Only, 10-in-10, and Combined)"
       url: "https://bpmcm.caiso.com/BPM%20Document%20Library/Demand%20Response/BPM_for_Demand_Response_V5_clean.pdf#page=35"
+    heat_cables:
+      name: "Technical Specification: Quantifying energy use and emissions savings for heat cable controls"
+      url: "https://methods.openeac.org/methodologies/heat-cable-conntrols/2025-08-21"
 
