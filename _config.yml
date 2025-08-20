@@ -29,6 +29,9 @@ links:
     electrification:
       name: "Technical Specification: Quantifying energy use and emissions savings for electrification"
       url: "https://methods.openeac.org/methodologies/device-level-heating-household-electrification/2025-02-07"
+    electrification_device_sensors:
+      name: "Technical Specification: Quantifying energy use and emissions savings for electrification using device-level sensors"
+      url: "https://methods.openeac.org/methodologies/device-level-sensors-electrification/2025-08-21"
     demand_response_ciso:
       name: "CISO: Day Matching (5-in-10 Residential Only, 10-in-10, and Combined)"
       url: "https://bpmcm.caiso.com/BPM%20Document%20Library/Demand%20Response/BPM_for_Demand_Response_V5_clean.pdf#page=35"
