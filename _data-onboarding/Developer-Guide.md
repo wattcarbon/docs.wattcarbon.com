@@ -61,6 +61,7 @@ The `location` is also required here, and this is where you can put a street add
 }
 ```
 
+<!-- theme: info -->
 > The `location` field can also take an object with individual fields for Street/City/State etc. or even the Latitude and Longitude of the site.
 
 ## 3. Upload Meter Timeseries
@@ -81,10 +82,13 @@ Here are a few of the most commonly used entries for the `kind` field:
 
 If you have any questions about which methodology to select for your assets, reach out to support@wattcarbon.com.
 
+<!-- theme: info -->
 > The location is required again in this endpoint. This is a little redundant with the "meter" location, but the location in the device/asset is what is actually used to map to weather data, so its also important here.
 
+<!-- theme: info -->
 > The "meterIds" field is where you'll want to provide the ids for any meter(s) you created earlier to attach to this asset.
 
+<!-- theme: info -->
 > If you have a unique ID for the site that you use for your own tracking, you can pass it in the `customId` field. The API will enforce that the same custom ID is never used on multiple sites in your account.
 
 ### Solar Example
