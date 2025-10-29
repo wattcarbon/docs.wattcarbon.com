@@ -45,9 +45,9 @@ client.headers["Authorization"] = "Bearer " + token
 See the documentation for [POST /auth/token](https://api.wattcarbon.com/#tag/Tokens/operation/create_token_auth_token_post) for more information.
 
 
-## 2. [Create a Meter](https://api.wattcarbon.com/#tag/Meters/operation/Meters-create_meter)
+## 2. Create a Meter
 
-Here is where you can create the objects that will hold the energy timeseries. For this endpoint, you must use `manual` as the `apiProvider`. `meterType` can either be `gas` or `electricity`.
+Here is where you can create the objects that will hold the energy timeseries. For [this endpoint](https://api.wattcarbon.com/#tag/Meters/operation/Meters-create_meter), you must use `manual` as the `apiProvider`. `meterType` can either be `gas` or `electricity`.
 
 The `location` is also required here, and this is where you can put a street address. There are a few different ways to format this field, here is an example:
 
