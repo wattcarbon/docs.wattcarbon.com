@@ -83,7 +83,7 @@ If you have any questions about which methodology to select for your assets, rea
 
 > The location is required again in this endpoint. This is a little redundant with the "meter" location, but the location in the device/asset is what is actually used to map to weather data, so its also important here.
 
-> The "meterIds" field is where you'll want to provide the ids for any meter(s) you created earlier to attach to this device/asset.
+> The "meterIds" field is where you'll want to provide the ids for any meter(s) you created earlier to attach to this asset.
 
 > If you have a unique ID for the site that you use for your own tracking, you can pass it in the `customId` field. The API will enforce that the same custom ID is never used on multiple sites in your account.
 
@@ -93,12 +93,12 @@ If you have any questions about which methodology to select for your assets, rea
 create_device_response = client.post(
     "/devices",
     json={
-      "name": "My device",
+      "name": "My asset",
       "customId": "SP123",
       "location": "60 Greene St Riverside IA",
       "utility": "ABC Utility",
       "deviceOwner": {"name": "Person Person"},
-      "meterId": "M123",
+      "meterIds": [999],
       "commencedOperationDate": "2022-08-01",
       "kind": "solar",
       "nameplateCapacityKw": "123",
