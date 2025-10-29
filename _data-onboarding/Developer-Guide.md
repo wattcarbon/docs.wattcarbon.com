@@ -44,9 +44,48 @@ client.headers["Authorization"] = "Bearer " + token
 
 See the documentation for [POST /auth/token](https://api.wattcarbon.com/#tag/Tokens/operation/create_token_auth_token_post) for more information.
 
-## 2. Create a device.
 
-A device contains the information necessary to validate that EACs can be generated.
+## 2. [Create a Meter](https://api.wattcarbon.com/#tag/Meters/operation/Meters-create_meter)
+
+Here is where you can create the objects that will hold the energy timeseries. For this endpoint, you can use "manual" as the "apiProvider". "meterType" can either be "gas" or "electricity".
+
+The "location" is also required here, and this is where you can put a street address. There are a few different ways to format this field, here is an example:
+
+```
+"location": {
+  "street": "606 Ellis St",
+  "city": "San Francisco",
+  "state": "CA",
+  "country": "US",
+  "postalCode": "94109"
+}
+```
+
+> The `location` field can also take an object with individual fields for Street/City/State etc. or even the Latitude and Longitude of the site.
+
+## 3. Upload Meter Timeseries
+
+Once you have a meter you can upload a timeseries for the meter using [this endpoint](https://api.wattcarbon.com/#tag/Meters/operation/Meters-upload_meter_intervals). This is basically where you'd upload the CSV.
+
+## 4. Create an Asset/Device
+
+Once you have meters with timeseries in them, you will create an asset (aka "device" - the terms "asset" and "device" are currently used interchangeably) using [this endpoint](https://api.wattcarbon.com/#tag/Devices/operation/Devices-create_device). When looking at this endpoint, use the dropdown in the "kind" field and select the correct methodology - this will show the extra required fields for a certain type of asset.
+
+Here are a few of the most commonly used entries for the `kind` field:
+
+- `solar_direct`: Solar Panel Impact
+- `storage_direct`: Direct battery impact
+- `electrification_billing_metered`: For electrification projects that use meter data.
+- `energy_efficiency_eemetered`: For energy efficiency projects that use meter data.
+- `tracking_building`: For tracking the historical consumption of buildings and comparing that consumption to a reference building, as well as getting a baseline EEMeter model.
+
+If you have any questions about which methodology to select for your assets, reach out to support@wattcarbon.com.
+
+> The location is required again in this endpoint. This is a little redundant with the "meter" location, but the location in the device/asset is what is actually used to map to weather data, so its also important here.
+
+> The "meterIds" field is where you'll want to provide the ids for any meter(s) you created earlier to attach to this device/asset.
+
+> If you have a unique ID for the site that you use for your own tracking, you can pass it in the `customId` field. The API will enforce that the same custom ID is never used on multiple sites in your account.
 
 ### Solar Example
 
@@ -60,9 +99,7 @@ create_device_response = client.post(
       "utility": "ABC Utility",
       "deviceOwner": {"name": "Person Person"},
       "meterId": "M123",
-      "commencedOperationDate": "2022-08-01", 
-
-    
+      "commencedOperationDate": "2022-08-01",
       "kind": "solar",
       "nameplateCapacityKw": "123",
       "inverterDataId": "1234",
@@ -86,9 +123,7 @@ create_device_response = client.post(
       "utility": "ABC Utility",
       "deviceOwner": {"name": "Person Person"},
       "meterId": "M123",
-      "commencedOperationDate": "2022-08-01", 
-
-    
+      "commencedOperationDate": "2022-08-01",
       "kind": "electrification",
       "areaSqft": "123",
       "previousFuel": "natural_gas",
@@ -104,32 +139,3 @@ create_device_response = client.post(
 )
 create_device_response.raise_for_status()
 ```
-
-<!-- theme: info -->
-
-> The `location` field can also take an object with individual fields for Street/City/State etc. or even the Latitude and Longitude of the site.
-
-<!-- theme: info -->
-
-> If you have a unique ID for the site that you use for your own tracking, you can pass it in the `customId` field. The API will enforce that the same custom ID is never used on multiple sites in your account.
-
-See [POST /devices](https://api.wattcarbon.com/#tag/Devices/operation/create_device_devices_post) for more information about all the potential values. If you need to change the device's parameters later on, you can use the [PUT /devices/{id}](https://api.wattcarbon.com/#tag/Devices/operation/update_device_devices__device_id__put) endpoint.
-
-## 3. Upload device data
-
-Device data is defined as the electrical energy generated (like with Solar), electrical energy supplied (like with a battery), electrical energy saved (like with Demand Response), or useful heat generated (like with electrification). We currently require device savings data to be hourly frequency.  The data should be positive (+) to represent either direct generation or a reduction in consumption, and negative (-) to represent additional consumption.
-
-The data must be in the correct format; here's a quick example:
-
-```csv
-datetime,value_kwh
-2022-08-01T00:00:00+00:00,0.1
-2022-08-01T01:00:00+00:00,1.1
-2022-08-01T02:00:00+00:00,2.3
-2022-08-01T03:00:00+00:00,1.4
-2022-08-01T04:00:00+00:00,1.6
-```
-
-See [POST /devices/{device_id}/timeseries](https://api.wattcarbon.com/#tag/Devices/operation/upload_device_timeseries_devices__device_id__timeseries_post) for more information about the file format and how to upload savings data.
-
-For now, that is all you need to do to add a device and provide device data. We will include additional steps in the future to further automate our registration process, but for now please email <support@wattcarbon.com> when you have completed this process.
