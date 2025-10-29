@@ -49,7 +49,7 @@ See the documentation for [POST /auth/token](https://api.wattcarbon.com/#tag/Tok
 
 Here is where you can create the objects that will hold the energy timeseries. For this endpoint, you can use "manual" as the "apiProvider". "meterType" can either be "gas" or "electricity".
 
-The "location" is also required here, and this is where you can put a street address. There are a few different ways to format this field, here is an example:
+The `location` is also required here, and this is where you can put a street address. There are a few different ways to format this field, here is an example:
 
 ```
 "location": {
