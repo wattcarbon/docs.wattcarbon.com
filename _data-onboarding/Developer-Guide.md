@@ -12,6 +12,14 @@ You will need credentials to access the WattCarbon API. We'll call these `EMAIL_
 
 This example is implemented using Python's [HTTPX library](https://www.python-httpx.org/) but any HTTP client will work.
 
+## 0. Grab the API Key
+
+Before starting with the API, you need to grab an API key from the platform. There is a unique API key for each account that your user is associated with. Each individual user has a personal account by default. We typically also create an Organizational account for companies that all users of that company are a part of. It is important to use the API key from the correct account, as this determines where the assets are loaded on the platform and what other users are able to see them.
+
+On the upper left-side of the screen there is a WattCarbon logo and the name for the account that you are currently viewing. Upon first logging in, this will typically say 'Personal'. If you click that, you are able to select other accounts that your user has access to.
+
+Once you have selected the correct account, go to 'Account Settings' on the left-side of the screen. At the bottom, there is a place that says API Key, and under it a box that says 'hidden'. If you click on that box, it will reveal the API key.
+
 ## 1. Get an access token
 
 Start out by converting your long-lived API token into a temporary access token. The access token is used for authenticating requests to the rest of the API and lasts only 24 hours. This process must be repeated to get a new token whenever the old one expires.
