@@ -76,8 +76,8 @@ The `location` is also required here, and this is where you can put a street add
 
 Once you have a meter you can upload a timeseries. Depending on the granularity of the data, you will use one of the following methods to upload the CSV:
 
- - [Intervals (Daily, Hourly, or Sub-Hourly Data) Endpoint)](https://api.wattcarbon.com/#tag/Meters/operation/Meters-upload_meter_intervals).
- - [Bills Endpoint)](https://api.wattcarbon.com/#tag/Meters/operation/Meters-upload_meter_bills).
+ - [Intervals (Daily, Hourly, or Sub-Hourly Data)](https://api.wattcarbon.com/#tag/Meters/operation/Meters-upload_meter_intervals)
+ - [Bills](https://api.wattcarbon.com/#tag/Meters/operation/Meters-upload_meter_bills)
 
 ## 4. Create an Asset/Device
 
