@@ -113,7 +113,6 @@ create_device_response = client.post(
       "customId": "SP123",
       "location": "60 Greene St Riverside IA",
       "utility": "ABC Utility",
-      "deviceOwner": {"name": "Person Person"},
       "meterIds": [999],
       "commencedOperationDate": "2022-08-01",
       "kind": "solar",
@@ -137,7 +136,6 @@ create_device_response = client.post(
       "customId": "HP123",
       "location": "60 Greene St Riverside IA",
       "utility": "ABC Utility",
-      "deviceOwner": {"name": "Person Person"},
       "meterId": "M123",
       "commencedOperationDate": "2022-08-01",
       "kind": "electrification",
@@ -165,15 +163,13 @@ create_device_response = client.post(
       "customId": "HP123",
       "location": "60 Greene St Riverside IA",
       "utility": "ABC Utility",
-      "deviceOwner": {"name": "Person Person"},
       "meterId": "M123",
-      "commencedOperationDate": "2022-08-01",
-      "kind": "electrification",
+      "kind": "demand_response_eemetered",
     }
 )
 create_device_response.raise_for_status()
 
-device_id = create_device_response['id']
+device_id = create_device_response.json()['id']
 ```
 
 For demand response, in addition to the meter data we also need a list of when the events took place. For this, you can use [this endpoint](https://api.wattcarbon.com/#tag/Documents/operation/Documents-upload_asset_document) with the device_id from the response of the previous request to upload the file of DR events. Make sure you use `"type": "demand_response_events"` in the request POST data. The format of the DR event file should be as follows:
