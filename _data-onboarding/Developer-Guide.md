@@ -89,6 +89,7 @@ Here are a few of the most commonly used entries for the `kind` field:
 - `storage_direct`: Direct battery impact
 - `electrification_billing_metered`: For electrification projects that use meter data.
 - `energy_efficiency_eemetered`: For energy efficiency projects that use meter data.
+- `demand_response_eemetered`: For demand response events that use short-term baseline meter data and event data.
 - `tracking_building`: For tracking the historical consumption of buildings and comparing that consumption to a reference building, as well as getting a baseline EEMeter model.
 
 If you have any questions about which methodology to select for your assets, reach out to support@wattcarbon.com.
@@ -154,3 +155,31 @@ create_device_response = client.post(
 )
 create_device_response.raise_for_status()
 ```
+
+### Demand Response Example
+```python
+create_device_response = client.post(
+    "/devices",
+    json={
+      "name": "My device",
+      "customId": "HP123",
+      "location": "60 Greene St Riverside IA",
+      "utility": "ABC Utility",
+      "deviceOwner": {"name": "Person Person"},
+      "meterId": "M123",
+      "commencedOperationDate": "2022-08-01",
+      "kind": "electrification",
+    }
+)
+create_device_response.raise_for_status()
+
+device_id = create_device_response['id']
+```
+
+For demand response, in addition to the meter data we also need a list of when the events took place. For this, you can use [this endpoint](https://api.wattcarbon.com/#tag/Documents/operation/Documents-upload_asset_document) with the device_id from the response of the previous request to upload the file of DR events. Make sure you use `"type": "demand_response_events"` in the request POST data. The format of the DR event file should be as follows:
+
+| Event Start Time | Event End Time |
+| ---------------- | -------------- |
+| 2021-01-01 17:00:00-05:00 | 2021-01-01 20:00:00-05:00 | 
+| 2021-01-05 16:00:00-05:00 | 2021-01-05 18:00:00-05:00 | 
+| 2021-01-08 17:00:00-05:00 | 2021-01-08 20:00:00-05:00 | 
