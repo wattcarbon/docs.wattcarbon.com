@@ -1,10 +1,12 @@
 ---
-title: Uploading Devices and Data end to end example
+title: Uploading Assets and Data end to end example
 nav: Developer Guide
 order: 2
 ---
 
-This example will walk you through logging in, creating a device, and uploading savings values. In order to register devices to the WattCarbon platform, you must first go through the process of registering as a WattCarbon project developer. Contact us at <support@wattcarbon.com> if you are interested in registering projects.
+This example will walk you through logging in, creating an asset, and uploading savings values.
+In order to register assets to the WattCarbon platform, you must first go through the process of registering as a WattCarbon project developer.
+Contact us at <support@wattcarbon.com> if you are interested in registering projects.
 
 ## Prerequisites
 
@@ -79,9 +81,10 @@ Once you have a meter you can upload a timeseries. Depending on the granularity 
  - [Intervals (Daily, Hourly, or Sub-Hourly Data)](https://api.wattcarbon.com/#tag/Meters/operation/Meters-upload_meter_intervals)
  - [Bills](https://api.wattcarbon.com/#tag/Meters/operation/Meters-upload_meter_bills)
 
-## 4. Create an Asset/Device
+## 4. Create an Asset
 
-Once you have meters with timeseries in them, you will create an asset (aka "device" - the terms "asset" and "device" are currently used interchangeably) using [this endpoint](https://api.wattcarbon.com/#tag/Devices/operation/Devices-create_device). When looking at this endpoint, use the dropdown in the "kind" field and select the correct methodology - this will show the extra required fields for a certain type of asset.
+Once you have meters with timeseries in them, you will create an asset using [the CreateAsset endpoint](https://api.wattcarbon.com/#tag/Assets/operation/Assets-create_asset).
+When looking at this endpoint, use the dropdown in the "kind" field and select the correct methodology - this will show the extra required fields for a certain type of asset.
 
 Here are a few of the most commonly used entries for the `kind` field:
 
@@ -95,7 +98,7 @@ Here are a few of the most commonly used entries for the `kind` field:
 If you have any questions about which methodology to select for your assets, reach out to support@wattcarbon.com.
 
 <!-- theme: info -->
-> The location is required again in this endpoint. This is a little redundant with the "meter" location, but the location in the device/asset is what is actually used to map to weather data, so its also important here.
+> The location is required again in this endpoint. This is a little redundant with the "meter" location, but the location in the asset is what is actually used to map to weather data, so its also important here.
 
 <!-- theme: info -->
 > The "meterIds" field is where you'll want to provide the ids for any meter(s) you created earlier to attach to this asset.
@@ -106,8 +109,8 @@ If you have any questions about which methodology to select for your assets, rea
 ### Solar Example
 
 ```python
-create_device_response = client.post(
-    "/devices",
+create_asset_response = client.post(
+    "/assets",
     json={
       "name": "My asset",
       "customId": "SP123",
@@ -120,19 +123,19 @@ create_device_response = client.post(
       "inverterDataId": "1234",
       "inverterDataSource": "enphase",
       "externalRegistryName": "GATS",
-      "externalRegistryDeviceId": "45678"
+      "externalRegistryAssetId": "45678"
     }
 )
-create_device_response.raise_for_status()
+create_asset_response.raise_for_status()
 ```
 
 ### Electrification Example
 
 ```python
-create_device_response = client.post(
-    "/devices",
+create_asset_response = client.post(
+    "/assets",
     json={
-      "name": "My device",
+      "name": "My asset",
       "customId": "HP123",
       "location": "60 Greene St Riverside IA",
       "utility": "ABC Utility",
@@ -151,15 +154,15 @@ create_device_response = client.post(
       "waterHeaterUef": 3
     }
 )
-create_device_response.raise_for_status()
+create_asset_response.raise_for_status()
 ```
 
 ### Demand Response Example
 ```python
-create_device_response = client.post(
-    "/devices",
+create_asset_response = client.post(
+    "/assets",
     json={
-      "name": "My device",
+      "name": "My asset",
       "customId": "HP123",
       "location": "60 Greene St Riverside IA",
       "utility": "ABC Utility",
@@ -167,12 +170,15 @@ create_device_response = client.post(
       "kind": "demand_response_eemetered",
     }
 )
-create_device_response.raise_for_status()
+create_asset_response.raise_for_status()
 
-device_id = create_device_response.json()['id']
+asset_id = create_asset_response.json()["id"]
 ```
 
-For demand response, in addition to the meter data we also need a list of when the events took place. For this, you can use [this endpoint](https://api.wattcarbon.com/#tag/Documents/operation/Documents-upload_asset_document) with the device_id from the response of the previous request to upload the file of DR events. Make sure you use `"type": "demand_response_events"` in the request POST data. The format of the DR event file should be as follows:
+For demand response, in addition to the meter data we also need a list of when the events took place.
+For this, you can use [the UploadAssetDocument endpoint](https://api.wattcarbon.com/#tag/Documents/operation/Documents-upload_asset_document) with the `asset_id` from the response of the previous request to upload the file of DR events.
+Make sure you use `"type": "demand_response_events"` in the request POST data.
+The format of the DR event file should be as follows:
 
 | Event Start Time | Event End Time |
 | ---------------- | -------------- |
