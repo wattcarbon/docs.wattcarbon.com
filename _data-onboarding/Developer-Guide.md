@@ -90,7 +90,7 @@ Here are a few of the most commonly used entries for the `kind` field:
 
 - `solar_direct`: Solar Panel Impact
 - `storage_direct`: Direct battery impact
-- `electrification_billing_metered`: For electrification projects that use meter data.
+- `electrification_eemetered`: For electrification projects that use meter data.
 - `energy_efficiency_eemetered`: For energy efficiency projects that use meter data.
 - `demand_response_eemetered`: For demand response events that use short-term baseline meter data and event data.
 - `tracking_building`: For tracking the historical consumption of buildings and comparing that consumption to a reference building, as well as getting a baseline EEMeter model.
