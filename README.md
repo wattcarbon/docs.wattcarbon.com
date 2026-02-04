@@ -4,13 +4,14 @@ This is the source code for <https://docs.wattcarbon.com>.
 
 ## Metadata
 
-Pages are written in [Kramdown Markdown](https://kramdown.gettalong.org/quickref.html) and must have [Front Matter](https://jekyllrb.com/docs/front-matter/) to be registered by the build process. For example:
+Pages are written in [Kramdown Markdown](https://kramdown.gettalong.org/quickref.html) and must have [Front Matter](https://jekyllrb.com/docs/front-matter/) to be registered by the build process. The latest tag is only used for M&V methodologies. For example:
 
 ```markdown
 ---
 title: My Page Title -- This can be quite long! It shows up in the tab of your browser and in the top of the page
 nav: Short name for nav bar
 last_modified: 2025-01-01
+latest: True
 ---
 
 ## Your markdown content goes here

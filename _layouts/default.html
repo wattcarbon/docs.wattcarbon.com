@@ -36,9 +36,11 @@
 
               <ol>
                 {% for item in collection.docs %}
+                  {% if collection.label != "m-and-v" or item.latest == true %}
                   <li>
                     <a {% if item.url == page.url %}class="active"{% endif %} href="{{ item.url | relative_url }}">{{ item.nav | default: item.title }}</a>
                   </li>
+                  {% endif %}
                 {% endfor %}
               </ol>
             </li>
