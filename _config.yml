@@ -21,21 +21,21 @@ collections:
 links:
   m_and_v:
     shared:
-      name: "Technical Specification: Common Decarbonization"
-      url: "https://methods.openeac.org/methodologies/basic-decarbonization-accounting/2025-02-07"
+      name: "Shared Guidelines"
+      url: "https://methods.openeac.org/methodologies/shared-guidelines"
     lighting:
-      name: "Technical Specification: Sample-Measured Reporting (Modeled Baseline, Estimated Measured Wattage)"
-      url: "https://methods.openeac.org/methodologies/whole-building-metered-lighting/2025-02-07"
+      name: "Metered Lighting"
+      url: "https://methods.openeac.org/methodologies/device-level-metered-lighting/2025-02-07"
     electrification:
-      name: "Technical Specification: Quantifying energy use and emissions savings for electrification"
+      name: "Building-Level Weather Normalization"
       url: "https://methods.openeac.org/methodologies/device-level-heating-household-electrification/2025-02-07"
     electrification_device_sensors:
-      name: "Technical Specification: Quantifying energy use and emissions savings for electrification using device-level sensors"
+      name: "Device-Level Sensors for Electrification"
       url: "https://methods.openeac.org/methodologies/device-level-sensors-electrification/2025-08-21"
     demand_response_ciso:
       name: "CISO: Day Matching (5-in-10 Residential Only, 10-in-10, and Combined)"
       url: "https://bpmcm.caiso.com/BPM%20Document%20Library/Demand%20Response/BPM_for_Demand_Response_V5_clean.pdf#page=35"
     seasonal_controls:
-      name: "Technical Specification: Quantifying energy use and emissions savings for seasonal controls"
+      name: "Seasonal Device Controls"
       url: "https://methods.openeac.org/methodologies/seasonal-controls/2025-08-21"
 
